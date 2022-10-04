@@ -675,6 +675,18 @@ body {
   width: 150px;
 }
 
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[160px\] {
+  width: 160px;
+}
+
+.w-\[170px\] {
+  width: 170px;
+}
+
 .border-collapse {
   border-collapse: collapse;
 }

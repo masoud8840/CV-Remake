@@ -54,6 +54,29 @@
         </info-badge>
       </div>
     </section>
+
+    <!-- Education -->
+    <section class="personal-info">
+      <h3
+        class="section-title font-medium text-2xl letter tracking-[1px] text-text-light mb-[50px]"
+      >
+        EDUCATION
+      </h3>
+      <div class="section-description">
+        <info-badge>
+          <template #title>BACHLEOR OF<br />COMPUTER ENGINEERING</template>
+          <template #description>
+            Islamic Azad University of<br />Eslamshahr<br />2019 - 2022
+          </template>
+        </info-badge>
+        <p class="description-text text-text-light text-sm font-normal leading-[21px]">
+          After a slow start in biology in high school, when I entered
+          university, I changed my field of study to computer engineering and
+          continued to study and learn in this field with more motivation and
+          enthusiasm.
+        </p>
+      </div>
+    </section>
   </div>
 </template>
 
