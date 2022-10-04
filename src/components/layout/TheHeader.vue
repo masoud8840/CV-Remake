@@ -19,19 +19,19 @@
       <div class="social grid gap-[10px]">
         <div class="social-item flex gap-[10px] items-center">
           <img src="/Logo_Telegram.svg" alt="telegram" />
-          <span class="leading-[18px] font-medium text-xs text-text-semidark"
+          <span class="leading-[18px] font-medium text-xs text-text-light"
             >@weber_man</span
           >
         </div>
         <div class="social-item flex gap-[10px] items-center">
           <img src="/Logo_Instagram.svg" alt="telegram" />
-          <span class="leading-[18px] font-medium text-xs text-text-semidark"
+          <span class="leading-[18px] font-medium text-xs text-text-light"
             >gharedaghi.ce</span
           >
         </div>
         <div class="social-item flex gap-[10px] items-center">
           <img src="/Logo_Github.svg" alt="telegram" />
-          <span class="leading-[18px] font-medium text-xs text-text-semidark"
+          <span class="leading-[18px] font-medium text-xs text-text-light"
             >masoud8840</span
           >
         </div>

@@ -9,3 +9,10 @@
     @apply bg-bg-light
   }
 }
+
+
+.section-description {
+  display: grid;
+  grid-template-columns: minmax(0, 200px) minmax(0, 100%);
+  align-items: start;
+}
