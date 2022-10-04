@@ -799,10 +799,20 @@ body {
   gap: 10px;
 }
 
+.gap-\[\] {
+  gap: ;
+}
+
 .space-y-\[100px\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(100px * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(100px * var(--tw-space-y-reverse));
+}
+
+.space-y-\[50px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(50px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(50px * var(--tw-space-y-reverse));
 }
 
 .rounded-lg {
@@ -869,6 +879,10 @@ body {
 
 .pb-10 {
   padding-bottom: 2.5rem;
+}
+
+.pb-\[100px\] {
+  padding-bottom: 100px;
 }
 
 .text-2xl {

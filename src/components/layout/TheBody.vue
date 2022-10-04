@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto mt-[100px] space-y-[100px] pb-10">
+  <div class="container mx-auto mt-[100px] space-y-[100px] pb-[100px]">
     <!-- Introduction -->
     <section class="introduction">
       <h3
@@ -126,6 +126,28 @@
         </info-badge>
       </div>
     </section>
+
+    <!-- Experience -->
+    <section class="introduction">
+      <h3
+        class="section-title font-medium text-2xl letter tracking-[1px] text-text-light mb-[50px]"
+      >
+        EXPERIENCE
+      </h3>
+      <div class="flex flex-col gap-[50px]">
+        <div class="section-description" v-for="exp in experience" :key="exp">
+          <info-badge>
+            <template #title>{{ exp.projectTitle }}</template>
+            <template #description>{{ exp.date }}</template>
+          </info-badge>
+          <p
+            class="description-text text-text-light text-sm font-normal leading-[21px]"
+          >
+            {{ exp.description }}
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -218,6 +240,47 @@ const softSkills = ref([
   {
     title: "emotional intelligence",
     value: 4,
+  },
+]);
+const experience = ref([
+  {
+    projectTitle: "BQIT",
+    date: "September 2022",
+    description: "A simple exchange dashboard for admin and their users.",
+  },
+  {
+    projectTitle: "trading journal",
+    date: "August 2022",
+    description:
+      "As a beginner when you wanna start trading you need to record what you trade and your profits, this journal will help traders to record and journal their trades. it’s completed yet.",
+  },
+  {
+    projectTitle: `townstar knowledgebase`,
+    date: "July 2022",
+    description:
+      "The Gala Games has a game named TownStar, you need to know buildings info like what they make, what need to build them ... etc. this app will give you all the information you need to know about TownStar’s buildings and their products.",
+  },
+  {
+    projectTitle: "KRC20 NETWORK",
+    date: "April 2022",
+    description:
+      "This is a single Landing page which is related to and exchange or blockchain ... (I have not much information about this).",
+  },
+  {
+    projectTitle: "LET’S CHAT",
+    date: "January 2022",
+    description: "A cloned chat app from vuexy domain.",
+  },
+  {
+    projectTitle: "QUIZZ TIME",
+    date: "December 2021",
+    description:
+      "An app that reads information in json form and integrate them into html element, so users can answer them.",
+  },
+  {
+    projectTitle: "HAIR CLINIC",
+    date: "October 2021",
+    description: "A Multi-Page hair clinic template without functionality.",
   },
 ]);
 </script>
