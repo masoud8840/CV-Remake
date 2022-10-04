@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto mt-[100px] space-y-[100px]">
+  <div class="container mx-auto mt-[100px] space-y-[100px] pb-10">
     <!-- Introduction -->
     <section class="introduction">
       <h3
@@ -69,12 +69,61 @@
             Islamic Azad University of<br />Eslamshahr<br />2019 - 2022
           </template>
         </info-badge>
-        <p class="description-text text-text-light text-sm font-normal leading-[21px]">
+        <p
+          class="description-text text-text-light text-sm font-normal leading-[21px]"
+        >
           After a slow start in biology in high school, when I entered
           university, I changed my field of study to computer engineering and
           continued to study and learn in this field with more motivation and
           enthusiasm.
         </p>
+      </div>
+    </section>
+
+    <!-- Skill -->
+    <section class="personal-info">
+      <h3
+        class="section-title font-medium text-2xl letter tracking-[1px] text-text-light mb-[50px]"
+      >
+        SKILL
+      </h3>
+      <div class="grid grid-cols-6 gap-[50px]">
+        <info-badge
+          v-for="skill in hardSkills"
+          :key="skill"
+          :skill-amount="skill.value"
+        >
+          <template #title>{{ skill.title }}</template>
+          <template #description>
+            <img
+              src="/Star_Full.svg"
+              alt="star-full"
+              v-for="fullStar in skill.value"
+            />
+            <img
+              src="/Star_Empty.svg"
+              alt="star-full"
+              v-for="emptyStasoftSkillsr in 5 - skill.value"
+            />
+          </template>
+        </info-badge>
+      </div>
+      <div class="grid grid-cols-6 gap-[50px] mt-[50px]">
+        <info-badge v-for="skill in softSkills" :key="skill">
+          <template #title>{{ skill.title }}</template>
+          <template #description>
+            <img
+              src="/Star_Full.svg"
+              alt="star-full"
+              v-for="fullStar in skill.value"
+            />
+            <img
+              src="/Star_Empty.svg"
+              alt="star-full"
+              v-for="emptyStasoftSkillsr in 5 - skill.value"
+            />
+          </template>
+        </info-badge>
       </div>
     </section>
   </div>
@@ -107,6 +156,68 @@ const personalInfo = ref([
   {
     title: "website",
     value: "www.ce-911.gigfa.com",
+  },
+]);
+
+const hardSkills = ref([
+  {
+    title: "html",
+    value: 4,
+  },
+  {
+    title: "CSS",
+    value: 4,
+  },
+  {
+    title: "SCSS",
+    value: 3,
+  },
+  {
+    title: "bootstrap",
+    value: 2,
+  },
+  {
+    title: "tailwind css",
+    value: 1,
+  },
+  {
+    title: "javascript",
+    value: 3,
+  },
+  {
+    title: "vue.js",
+    value: 2,
+  },
+  {
+    title: "figma",
+    value: 1,
+  },
+]);
+
+const softSkills = ref([
+  {
+    title: "Problem solving",
+    value: 4,
+  },
+  {
+    title: "self learning",
+    value: 4,
+  },
+  {
+    title: "patience",
+    value: 4,
+  },
+  {
+    title: "time management",
+    value: 4,
+  },
+  {
+    title: "interpersonal skills",
+    value: 4,
+  },
+  {
+    title: "emotional intelligence",
+    value: 4,
   },
 ]);
 </script>
