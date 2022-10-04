@@ -3,7 +3,7 @@
     class="badge inline-flex w-[150px] flex-col relative after:w-[3px] after:h-full after:absolute after:-left-5 after:top-0 after:bg-gold"
   >
     <h5
-      class="badge-title font-medium text-xs text-text-dark leading-[18px] uppercase"
+      class="badge-title font-medium text-xs text-text-semidark tracking-[1px] leading-[18px] uppercase"
     >
       <slot name="title"></slot>
     </h5>

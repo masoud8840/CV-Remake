@@ -743,6 +743,26 @@ body {
   gap: 10px;
 }
 
+.gap-\[40px\] {
+  gap: 40px;
+}
+
+.gap-\[50px\] {
+  gap: 50px;
+}
+
+.gap-\[100px\] {
+  gap: 100px;
+}
+
+.gap-\[110px\] {
+  gap: 110px;
+}
+
+.gap-\[120px\] {
+  gap: 120px;
+}
+
 .space-y-\[100px\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(100px * calc(1 - var(--tw-space-y-reverse)));

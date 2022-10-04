@@ -39,9 +39,51 @@
         </p>
       </div>
     </section>
+
+    <!-- Personal Info -->
+    <section class="personal-info">
+      <h3
+        class="section-title font-medium text-2xl letter tracking-[1px] text-text-light mb-[50px]"
+      >
+        PERSONAL INFO
+      </h3>
+      <div class="grid grid-cols-6">
+        <info-badge v-for="info in personalInfo" :key="info">
+          <template #title>{{ info.title }}</template>
+          <template #description>{{ info.value }}</template>
+        </info-badge>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup>
+import { ref } from "vue";
 import InfoBadge from "../UI/InfoBadge.vue";
+const personalInfo = ref([
+  {
+    title: "name",
+    value: "Masoud Gharedaghi",
+  },
+  {
+    title: "Date Of Birth",
+    value: "05 Mar, 2001",
+  },
+  {
+    title: "Relationship",
+    value: "Single",
+  },
+  {
+    title: "Email",
+    value: "gharedaghi.zip@gmail.com",
+  },
+  {
+    title: "mobile",
+    value: "+98 937 0700 162",
+  },
+  {
+    title: "website",
+    value: "www.ce-911.gigfa.com",
+  },
+]);
 </script>
