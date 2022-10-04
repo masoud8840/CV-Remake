@@ -8,7 +8,73 @@
   body {
     @apply bg-bg-light
   }
+
+  .header {
+    @apply h-[250px] bg-bg-dark flex items-center
+  }
+
+  .header-container {
+    @apply container mx-auto flex items-center justify-between
+  }
+
+  .header-subtitle {
+    @apply leading-[18px] text-text-light font-medium text-xs
+  }
+
+  .header-title {
+    @apply font-semibold text-4xl leading-[54px] text-text-dark
+  }
+
+  .social {
+    @apply grid gap-[10px]
+  }
+
+  .social-item {
+    @apply flex gap-[10px] items-center
+  }
+
+  .social-caption {
+    @apply leading-[18px] font-medium text-xs text-text-light
+  }
+
+  .body-container {
+    @apply container mx-auto mt-[100px] space-y-[100px] pb-[100px]
+  }
+
+  .section-title {
+    @apply font-medium text-2xl tracking-[1px] text-text-light mb-[50px]
+  }
+
+  .description-text {
+    @apply text-text-light text-sm font-normal leading-[21px]
+  }
+
+
+  .soft-skill,
+  .hard-skill {
+    @apply grid grid-cols-6 gap-[50px]
+  }
+
+  .experience-inner {
+    @apply flex flex-col gap-[50px]
+  }
+
+
+  .badge {
+    @apply inline-flex w-[180px] flex-col relative after:w-[3px] after:h-full after:absolute after:-left-5 after:top-0 after:bg-gold
+  }
+  .badge-title {
+    @apply font-semibold text-xs text-text-semidark tracking-[1px] leading-[18px] uppercase
+  }
+  .badge-description {
+    @apply flex font-medium text-xs leading-[18px] text-text-light
+  }
+  .badge-tooltip {
+    @apply group-hover:-top-12 group-hover:opacity-100 -top-10 opacity-0 absolute pointer-events-none transition-all left-0 z-50 bg-gold shadow-md text-white py-1 px-5 rounded-lg
+  }
 }
+
+
 
 
 .section-description {

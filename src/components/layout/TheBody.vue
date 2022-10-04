@@ -1,20 +1,14 @@
 <template>
-  <div class="container mx-auto mt-[100px] space-y-[100px] pb-[100px]">
+  <div class="body-container">
     <!-- Introduction -->
     <section class="introduction">
-      <h3
-        class="section-title font-medium text-2xl letter tracking-[1px] text-text-light mb-[50px]"
-      >
-        WELCOME TO MY RESUME
-      </h3>
+      <h3 class="section-title">WELCOME TO MY RESUME</h3>
       <div class="section-description">
         <info-badge>
           <template #title>TEHRAN,<br />IRAN</template>
           <template #description>2018</template>
         </info-badge>
-        <p
-          class="description-text text-text-light text-sm font-normal leading-[21px]"
-        >
+        <p class="description-text">
           First line of HTML code was written. at those first years I’ve started
           to learn HTML & CSS, I took some persian courses which helps me a lot
           at the starting point I feel like a hero. I had not so much english
@@ -42,11 +36,7 @@
 
     <!-- Personal Info -->
     <section class="personal-info">
-      <h3
-        class="section-title font-medium text-2xl letter tracking-[1px] text-text-light mb-[50px]"
-      >
-        PERSONAL INFO
-      </h3>
+      <h3 class="section-title">PERSONAL INFO</h3>
       <div class="grid grid-cols-6">
         <info-badge v-for="info in personalInfo" :key="info">
           <template #title>{{ info.title }}</template>
@@ -56,12 +46,8 @@
     </section>
 
     <!-- Education -->
-    <section class="personal-info">
-      <h3
-        class="section-title font-medium text-2xl letter tracking-[1px] text-text-light mb-[50px]"
-      >
-        EDUCATION
-      </h3>
+    <section class="education">
+      <h3 class="section-title">EDUCATION</h3>
       <div class="section-description">
         <info-badge>
           <template #title>BACHLEOR OF<br />COMPUTER ENGINEERING</template>
@@ -69,9 +55,7 @@
             Islamic Azad University of<br />Eslamshahr<br />2019 - 2022
           </template>
         </info-badge>
-        <p
-          class="description-text text-text-light text-sm font-normal leading-[21px]"
-        >
+        <p class="description-text">
           After a slow start in biology in high school, when I entered
           university, I changed my field of study to computer engineering and
           continued to study and learn in this field with more motivation and
@@ -81,13 +65,9 @@
     </section>
 
     <!-- Skill -->
-    <section class="personal-info">
-      <h3
-        class="section-title font-medium text-2xl letter tracking-[1px] text-text-light mb-[50px]"
-      >
-        SKILL
-      </h3>
-      <div class="grid grid-cols-6 gap-[50px]">
+    <section class="skill">
+      <h3 class="section-title">SKILL</h3>
+      <div class="hard-skill">
         <info-badge
           v-for="skill in hardSkills"
           :key="skill"
@@ -108,7 +88,7 @@
           </template>
         </info-badge>
       </div>
-      <div class="grid grid-cols-6 gap-[50px] mt-[50px]">
+      <div class="soft-skill mt-[50px]">
         <info-badge v-for="skill in softSkills" :key="skill">
           <template #title>{{ skill.title }}</template>
           <template #description>
@@ -128,21 +108,15 @@
     </section>
 
     <!-- Experience -->
-    <section class="introduction">
-      <h3
-        class="section-title font-medium text-2xl letter tracking-[1px] text-text-light mb-[50px]"
-      >
-        EXPERIENCE
-      </h3>
-      <div class="flex flex-col gap-[50px]">
+    <section class="experience">
+      <h3 class="section-title">EXPERIENCE</h3>
+      <div class="experience-inner">
         <div class="section-description" v-for="exp in experience" :key="exp">
           <info-badge>
             <template #title>{{ exp.projectTitle }}</template>
             <template #description>{{ exp.date }}</template>
           </info-badge>
-          <p
-            class="description-text text-text-light text-sm font-normal leading-[21px]"
-          >
+          <p class="description-text">
             {{ exp.description }}
           </p>
         </div>
