@@ -1,5 +1,5 @@
 <template>
-  <div class="badge group">
+  <div class="group">
     <h5 class="badge-title">
       <slot name="title"></slot>
     </h5>

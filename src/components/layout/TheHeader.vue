@@ -12,11 +12,11 @@
           <span class="social-caption">@weber_man</span>
         </div>
         <div class="social-item">
-          <img src="/Logo_Instagram.svg" alt="telegram" />
+          <img src="/Logo_Instagram.svg" alt="instagram" />
           <span class="social-caption">gharedaghi.ce</span>
         </div>
         <div class="social-item">
-          <img src="/Logo_Github.svg" alt="telegram" />
+          <img src="/Logo_Github.svg" alt="github" />
           <span class="social-caption">masoud8840</span>
         </div>
       </div>

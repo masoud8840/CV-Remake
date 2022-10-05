@@ -4,7 +4,7 @@
     <section class="introduction">
       <h3 class="section-title">WELCOME TO MY RESUME</h3>
       <div class="section-description">
-        <info-badge>
+        <info-badge :class="setSomeClassOnMobileDevices">
           <template #title>TEHRAN,<br />IRAN</template>
           <template #description>2018</template>
         </info-badge>
@@ -37,8 +37,8 @@
     <!-- Personal Info -->
     <section class="personal-info">
       <h3 class="section-title">PERSONAL INFO</h3>
-      <div class="grid grid-cols-6">
-        <info-badge v-for="info in personalInfo" :key="info">
+      <div class="personal-info-inner">
+        <info-badge class="badge" v-for="info in personalInfo" :key="info">
           <template #title>{{ info.title }}</template>
           <template #description>{{ info.value }}</template>
         </info-badge>
@@ -49,10 +49,10 @@
     <section class="education">
       <h3 class="section-title">EDUCATION</h3>
       <div class="section-description">
-        <info-badge>
+        <info-badge :class="setSomeClassOnMobileDevices">
           <template #title>BACHLEOR OF<br />COMPUTER ENGINEERING</template>
           <template #description>
-            Islamic Azad University of<br />Eslamshahr<br />2019 - 2022
+            Islamic Azad University of Eslamshahr<br />2019 - 2022
           </template>
         </info-badge>
         <p class="description-text">
@@ -69,6 +69,7 @@
       <h3 class="section-title">SKILL</h3>
       <div class="hard-skill">
         <info-badge
+          class="badge"
           v-for="skill in hardSkills"
           :key="skill"
           :skill-amount="skill.value"
@@ -89,7 +90,7 @@
         </info-badge>
       </div>
       <div class="soft-skill mt-[50px]">
-        <info-badge v-for="skill in softSkills" :key="skill">
+        <info-badge class="badge" v-for="skill in softSkills" :key="skill">
           <template #title>{{ skill.title }}</template>
           <template #description>
             <img
@@ -112,7 +113,7 @@
       <h3 class="section-title">EXPERIENCE</h3>
       <div class="experience-inner">
         <div class="section-description" v-for="exp in experience" :key="exp">
-          <info-badge>
+          <info-badge :class="setSomeClassOnMobileDevices">
             <template #title>{{ exp.projectTitle }}</template>
             <template #description>{{ exp.date }}</template>
           </info-badge>
@@ -126,7 +127,8 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { computed } from "@vue/reactivity";
+import { onMounted, ref } from "vue";
 import InfoBadge from "../UI/InfoBadge.vue";
 const personalInfo = ref([
   {
@@ -257,4 +259,17 @@ const experience = ref([
     description: "A Multi-Page hair clinic template without functionality.",
   },
 ]);
+
+const screenWidth = ref(window.innerWidth);
+
+onMounted(() => {
+  console.log("Mounting...");
+  window.addEventListener("resize", () => {
+    screenWidth.value = window.innerWidth;
+  });
+});
+
+const setSomeClassOnMobileDevices = computed(() => {
+  return screenWidth.value < 768 ? "badge-mobile" : "badge";
+});
 </script>
