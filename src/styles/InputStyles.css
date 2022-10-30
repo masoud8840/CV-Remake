@@ -55,6 +55,9 @@
   .description-text {
     @apply text-text-light text-sm font-normal leading-[21px];
   }
+  .description-text a {
+    @apply hover:underline
+  }
 
   .soft-skill,
   .hard-skill,

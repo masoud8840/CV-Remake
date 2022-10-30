@@ -119,6 +119,7 @@
           </info-badge>
           <p class="description-text">
             {{ exp.description }}
+            <a :href="exp.link" target="_blank">Link To Project</a>
           </p>
         </div>
       </div>
@@ -220,50 +221,43 @@ const softSkills = ref([
 ]);
 const experience = ref([
   {
-    projectTitle: "BQIT",
-    date: "September 2022",
-    description: "A simple exchange dashboard for admin and their users.",
-  },
-  {
-    projectTitle: "trading journal",
-    date: "August 2022",
-    description:
-      "As a beginner when you wanna start trading you need to record what you trade and your profits, this journal will help traders to record and journal their trades. it’s completed yet.",
+    projectTitle: "ECOMMERCE WEBSITE",
+    date: "October 2022",
+    description: "A Multi-Page hair clinic template without functionality.",
+    link: "https://github.com/masoud8840/E-Commerce",
   },
   {
     projectTitle: `townstar knowledgebase`,
     date: "July 2022",
     description:
       "The Gala Games has a game named TownStar, you need to know buildings info like what they make, what need to build them ... etc. this app will give you all the information you need to know about TownStar’s buildings and their products.",
+    link: "https://github.com/masoud8840/townstar-knowledgebase",
   },
   {
-    projectTitle: "KRC20 NETWORK",
-    date: "April 2022",
+    projectTitle: "trading journal",
+    date: "August 2022",
     description:
-      "This is a single Landing page which is related to and exchange or blockchain ... (I have not much information about this).",
-  },
-  {
-    projectTitle: "LET’S CHAT",
-    date: "January 2022",
-    description: "A cloned chat app from vuexy domain.",
+      "As a beginner when you wanna start trading you need to record what you trade and your profits, this journal will help traders to record and journal their trades. it’s completed yet.",
+    link: "https://github.com/masoud8840/Trading-Journal",
   },
   {
     projectTitle: "QUIZZ TIME",
     date: "December 2021",
     description:
       "An app that reads information in json form and integrate them into html element, so users can answer them.",
+    link: "https://github.com/masoud8840/QuizzTime",
   },
   {
     projectTitle: "HAIR CLINIC",
     date: "October 2021",
     description: "A Multi-Page hair clinic template without functionality.",
+    link: "https://github.com/masoud8840/HairClinic",
   },
 ]);
 
 const screenWidth = ref(window.innerWidth);
 
 onMounted(() => {
-  console.log("Mounting...");
   window.addEventListener("resize", () => {
     screenWidth.value = window.innerWidth;
   });
