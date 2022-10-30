@@ -1,7 +1,17 @@
-# Vue 3 + Vite
+# My Personal CV
+This app shows you what I know & experienced.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### Run App
+To run the project you have to install nodejs on your machine, [Node.JS](https://www.nodejs.org)
 
-## Recommended IDE Setup
+To install project dependencies run this command
+```
+npm install
+```
+To run app on localhost run this command:
+```
+npm run dev
+```
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+### Figma File Here
+[CV](https://www.figma.com/file/ooZnDTiNfgPM5WfCLUcnak/CV(Remake))
