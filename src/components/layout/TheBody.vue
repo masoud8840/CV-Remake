@@ -36,7 +36,7 @@
 
     <!-- Personal Info -->
     <section class="personal-info">
-      <h3 class="section-title">PERSONAL INFO</h3>
+      <h3 class="section-title">PERSONAL</h3>
       <div class="personal-info-inner">
         <info-badge class="badge" v-for="info in personalInfo" :key="info">
           <template #title>{{ info.title }}</template>
@@ -119,9 +119,50 @@
           </info-badge>
           <p class="description-text">
             {{ exp.description }}
-            <a :href="exp.link" target="_blank">Link To Project</a>
+            <a :href="exp.link" target="_blank">See more</a>
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="languages">
+      <h3 class="section-title">LANGUAGE</h3>
+      <div class="language-inner">
+        <info-badge
+          class="badge"
+          v-for="(lang,,index) in languages"
+          :key="index"
+        >
+          <template #title>{{ lang.name }}</template>
+          <template #description>
+            <img
+              src="/Star_Full.svg"
+              alt="star-full"
+              v-for="filledStar in lang.level"
+            />
+            <img
+              src="/Star_Empty.svg"
+              alt="star-full"
+              v-for="emptyStar in 5 - lang.level"
+            />
+          </template>
+        </info-badge>
+      </div>
+    </section>
+
+    <!-- Hobby -->
+    <section class="hobby">
+      <h3 class="section-title">Hobby</h3>
+      <div class="hobby-inner">
+        <info-badge
+          class="badge"
+          v-for="(hobby, index) in hobbies"
+          :key="index"
+        >
+          <template #title>#{{ index + 1 }}</template>
+          <template #description>{{ hobby }}</template>
+        </info-badge>
       </div>
     </section>
   </div>
@@ -223,7 +264,8 @@ const experience = ref([
   {
     projectTitle: "ECOMMERCE WEBSITE",
     date: "October 2022",
-    description: "A Multi-Page hair clinic template without functionality.",
+    description:
+      "A project which will show everything related to my web development skills.",
     link: "https://github.com/masoud8840/E-Commerce",
   },
   {
@@ -254,7 +296,17 @@ const experience = ref([
     link: "https://github.com/masoud8840/HairClinic",
   },
 ]);
-
+const languages = ref([
+  {
+    name: "PERSIAN",
+    level: 5,
+  },
+  {
+    name: "ENGLISH",
+    level: 3,
+  },
+]);
+const hobbies = ref(["Playing Video Games", "Walk", "Learn New Things"]);
 const screenWidth = ref(window.innerWidth);
 
 onMounted(() => {
