@@ -13,8 +13,8 @@ To run app on localhost run this command:
 npm run dev
 ```
 
-### Live in Here
-[CV Live](http://ce-911.gigfa.com)
+### UI File
+[Open in Figma](https://www.figma.com/file/ooZnDTiNfgPM5WfCLUcnak/CV(Remake))
 
-### Figma File Here
-[CV](https://www.figma.com/file/ooZnDTiNfgPM5WfCLUcnak/CV(Remake))
+### Live Preview
+[Go Live](http://ce-911.gigfa.com)
