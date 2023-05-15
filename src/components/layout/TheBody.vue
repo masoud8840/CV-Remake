@@ -52,7 +52,7 @@
         <info-badge :class="setSomeClassOnMobileDevices">
           <template #title>BACHLEOR OF<br />COMPUTER ENGINEERING</template>
           <template #description>
-            Islamic Azad University of Eslamshahr<br />2019 - 2022
+            Islamic Azad University of Eslamshahr<br />2019 - 2023
           </template>
         </info-badge>
         <p class="description-text">
@@ -262,10 +262,17 @@ const softSkills = ref([
 ]);
 const experience = ref([
   {
+    projectTitle: "TUC TEAM Manager",
+    date: "April 2023",
+    description:
+      "A project for my startup which I will make another project for it, you can assign tasks to team members.",
+    link: "https://github.com/masoud8840/tuc-team-manager",
+  },
+  {
     projectTitle: "ECOMMERCE WEBSITE",
     date: "October 2022",
     description:
-      "A project which will show everything related to my web development skills.",
+      "A project which will show everything related to my web development skills. (development stopped)",
     link: "https://github.com/masoud8840/E-Commerce",
   },
   {
